@@ -1,0 +1,195 @@
+.login,
+.login * {
+  box-sizing: border-box;
+}
+.login {
+  background: #fffef8;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.log-in {
+  color: #1d6154;
+  text-align: center;
+  font: 700 30px "Syne", sans-serif;
+  position: absolute;
+  left: 669px;
+  top: 242px;
+}
+.e-mail {
+  color: #3d3d3d;
+  text-align: left;
+  font: 500 14px "Work Sans", sans-serif;
+  position: absolute;
+  left: 530px;
+  top: 315px;
+}
+.mot-de-passe {
+  color: #3d3d3d;
+  text-align: left;
+  font: 500 14px "Work Sans", sans-serif;
+  position: absolute;
+  left: 530px;
+  top: 419px;
+}
+.mot-de-passe-oubli {
+  color: #3d3d3d;
+  text-align: left;
+  font: 500 14px "Work Sans", sans-serif;
+  text-decoration: underline;
+  position: absolute;
+  left: 651px;
+  top: 593px;
+}
+.rectangle-12 {
+  background: #ffffff;
+  width: 379px;
+  height: 51px;
+  position: absolute;
+  left: 530px;
+  top: 338px;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+}
+.rectangle-13 {
+  background: #ffffff;
+  width: 379px;
+  height: 51px;
+  position: absolute;
+  left: 530px;
+  top: 441px;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+}
+.group-1 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-15 {
+  background: #1d6154;
+  border-radius: 60px;
+  width: 179px;
+  height: 36px;
+  position: absolute;
+  left: 630px;
+  top: 529px;
+}
+.se-connecter {
+  color: #ffffff;
+  text-align: center;
+  font: 700 14px "Syne", sans-serif;
+  position: absolute;
+  left: 669px;
+  top: 539px;
+}
+.footer {
+  width: 1440px;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 3325px;
+}
+.rectangle-16 {
+  background: #ffffff;
+  width: 1440px;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.mentions-l-gales {
+  color: #000000;
+  text-align: left;
+  font: 300 14px "Work Sans", sans-serif;
+  position: absolute;
+  left: 1224px;
+  top: 24px;
+}
+.footer2 {
+  width: 1440px;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 964px;
+}
+.menu {
+  width: 1140px;
+  height: 42px;
+  position: absolute;
+  left: 150px;
+  top: 50px;
+}
+.logo {
+  width: 213px;
+  height: 42px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.sophie-bluel {
+  color: #b1663c;
+  text-align: center;
+  font: 800 22px "Syne", sans-serif;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.architecte-d-int-rieur {
+  color: #93532f;
+  text-align: center;
+  font: 400 10px "Work Sans", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  left: 0px;
+  top: 30px;
+}
+.icons-8-instagram-1 {
+  position: absolute;
+  left: 1118px;
+  top: 10px;
+  overflow: visible;
+}
+.item-menu {
+  width: 55px;
+  height: 19px;
+  position: absolute;
+  left: 821px;
+  top: 11px;
+}
+.projets {
+  color: #000000;
+  text-align: center;
+  font: 400 16px "Work Sans", sans-serif;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.item-menu2 {
+  width: 55px;
+  height: 19px;
+  position: absolute;
+  left: 920px;
+  top: 11px;
+}
+.projets2 {
+  color: #000000;
+  text-align: center;
+  font: 400 16px "Work Sans", sans-serif;
+  position: absolute;
+  left: -3px;
+  top: 0px;
+}
+.item-menu3 {
+  width: 55px;
+  height: 19px;
+  position: absolute;
+  left: 1019px;
+  top: 11px;
+}
+.projets3 {
+  color: #000000;
+  text-align: center;
+  font: 600 16px "Work Sans", sans-serif;
+  position: absolute;
+  left: 8px;
+  top: 0px;
+}
