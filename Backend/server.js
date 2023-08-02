@@ -1,4 +1,4 @@
-const http = require('http://localhost:5678');
+const http = require('http');
 const app = require('./app');
 
 const normalizePort = val => {

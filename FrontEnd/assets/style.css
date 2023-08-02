@@ -1,36 +1,41 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ol, ul, li, tr, th, td,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, tbody, tfoot, thead,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, footer{
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+/* General */
 body {
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
 	line-height: 1;
+	background: #FFFFFF;
+	max-width: 1140px;
 }
+a {
+	text-decoration: none;
+}
+.color {
+	color: #000000;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -46,13 +51,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/** end reset css**/
-body {
-	max-width: 1140px;
-	margin:auto;
-	font-family: 'Work Sans' ;
-	font-size: 14px;
-}
+
+
 header {
 	display: flex;
 	justify-content: space-between;
@@ -98,6 +98,13 @@ nav li {
 li:hover {
 	color: #B1663C;
 }
+
+li:hover a{
+	color: #B1663C;
+}
+
+
+/* Introduction */
 #introduction {
 	display: flex;
 	align-items: center;
@@ -121,10 +128,19 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
-#portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
+
+#introduction figure {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 16px;
 }
+
+#introduction a {
+	margin-left: 57px;
+}
+
+/* Galerie */
 .gallery {
 	width: 100%;
 	display: grid;
@@ -137,6 +153,43 @@ li:hover {
 	width: 100%;
 
 }
+
+.galleryModal figure {
+	width: 19%;
+}
+.galleryModal {
+	width: 100%;
+	gap: 10px 6px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/* Nouveaux travaux */
+.NewWorks {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+}
+.NewWorks .text, .NewWorks select {
+	width: 100%;
+	height: 51px;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.NewWorks span {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: #3D3D3D;
+	padding-top: 11px;
+	padding-bottom: 0px;
+}
+
+/* Partie Contact */
 #contact {
 	width: 50%;
 margin: auto;
@@ -170,19 +223,445 @@ margin: auto;
 }
 
 input[type="submit"]{
-	font-family: 'Syne';
-	font-weight: 700;
-	color: white;
-	background-color: #1D6154;
 	margin : 2em auto ;
 	width: 180px;
 	text-align: center;
 	border-radius: 60px ;
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
 }
 
+
+.filter {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+.filterText {
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	color: #1D6154;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	border: 1px solid #1D6154;
+	border-radius: 60px;
+	height: 37px;
+	padding-left: 2%;
+	padding-right: 2%;
+	background: #FFFFFF;
+}
+
+
+.button:focus {
+	background: #1D6154;
+}
+.button:focus .filterText {
+	color: #FFFFFF;
+}
+
+
+.selection {
+	font-weight: bold;
+}
+
+/* Partie Login */
+#login h2 {
+	text-align: center;
+}
+#login span {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: #3D3D3D;
+	padding-top: 23px;
+	padding-bottom: 0px;
+}
+#login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 14px;
+	margin-top: 150px;
+	margin-bottom: 1em;
+}
+#login .text {
+	
+	width: 379px;
+	height: 51px;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.login {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 7px;
+}
+.login .connect {
+	width: 179px;
+	height: 36px;
+	border: none;
+}
+
+.login #rong {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 14px;
+	color: #ec0c0c;
+	font-weight: bold;
+	text-align: center;
+}
+
+.forgot {
+	text-align: center;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: #3D3D3D;
+	text-decoration-line: underline;
+}
+.connect {
+	background: #1D6154;
+	border-radius: 60px;
+	color: #FFFFFF;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	margin : 2em auto ;
+}
+
+.align {
+	margin-top: 250px;
+}
+
+/* Edition */
+#edition {
+	display: none;
+}
+.edition {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 21px;
+	width: 100%;
+	height: 60px;
+	left: 0;
+	right: 0;
+	background: #000000;
+}
+.editionmode {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 12px
+}
+.editionmode span {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #ffffff
+}
+.edition input {
+	width: 220px;
+	height: 40px;
+	background: #FFFFFF;
+	border-radius: 60px;
+
+	font-family: 'Work Sans';
+	font-style: normal;
+	text-align: center;
+	color: #000000;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.edit span {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+}
+
+.edit {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 11px;
+	color:#000000;
+}
+#adminedit {
+	display: none;
+}
+#adminedit2 {
+	display: none;
+}
+#adminedit3 {
+	display: none;
+}
+
+
+.fontaColor {
+	color: #ffffff
+}
+#loginButton {
+	display: content;
+}
+#logoutButton {
+	display: none;
+}
+
+#introduction article {
+	display: flex;
+	flex-direction: column;
+	gap: 19px;
+}
+
+
+.modal {
+	position: fixed;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+}
+.modal2 {
+	position: fixed;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+}
+.modal-wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	gap: 16px;
+	width: 630px;
+	max-width: calc(100vw - 20px);
+	max-height: calc(100vh - 20px);
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+.buttonModal {
+	margin-top: 32px;
+	margin-bottom: 0px;
+	width: 95%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.buttonModal button {
+	background-color: #ffffff;
+	border: none;
+}
+.buttonModal2 {
+	margin-top: 32px;
+	margin-bottom: 0px;
+	width: 90%;
+	padding: 0 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.buttonModal2 button {
+	background-color: #ffffff;
+	border: none;
+}
+.content {
+	margin: 0 auto;
+	width: 450px;
+}
+.ModalTitle {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 30px;
+	margin-top: 0px;
+	margin-bottom: 46px;
+}
+.border {
+	width: 100%;
+	height: 0px;
+	margin-top: 47px;
+	margin-bottom: 18px;
+	border: 1px solid #B3B3B3;
+}
+.ButtonModal {
+	height: 36px;
+	background: #1D6154;
+	border-radius: 60px;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	border: none;
+}
+.content input[type="submit"]{
+	width: 237px;
+	margin : 20px auto ;
+}
+.ModalButton {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.deleteAll {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 3px;
+	margin-bottom: 48px;
+}
+.deleteAll a {
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: #D65353;
+}
+.figureModal {
+	display: flex;
+	flex-direction: column;
+}
+.abso {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+}
+.textModal {
+	width: 20%;
+}
+
+.ProjectBar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 31px;
+	margin-top: 120px;
+	margin-bottom: 1em;
+}
+.DeleteButton {
+	position: absolute;
+    background: #000000;
+	border-radius: 4px;
+    top: 5%;
+    right: 5%;
+	width: 25%;
+	height: 20%;
+	display: flex;
+	flex-direction: center;
+	justify-content: center;
+	align-items: center;
+}
+.colorModal {
+	color: #FFFFFF;
+}
+
+
+.pictureModal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 169px;
+	background: #E8F1F7;
+	border-radius: 3px;
+}
+
+.InputFile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 173px;
+	height: 36px;
+	background: #CBD6DC;
+	border-radius: 50px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	cursor: pointer;
+	color: #306685;
+}
+.pictureModal input {
+	display: none;
+}
+.ButtonModal:disabled,
+button[disabled]{
+	background: #A7A7A7;
+}
+.PictureResult {
+	max-width: 420px;
+	max-height: 169px;
+}
+
+/* Footer */
+footer {
+	background: #FFFFFF;
+	width: 100%;
+	align-items: center;
+}
+footer li {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-right: 5%;
+	padding-left: 0%;
+}
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
-	margin: 2em
+	
 }
-
