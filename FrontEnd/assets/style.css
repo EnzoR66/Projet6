@@ -248,11 +248,11 @@ input[type="submit"]{
 .filterText {
 	font-family: 'Syne';
 	font-style: normal;
+	text-align: center;
+	color: #1D6154;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 19px;
-	text-align: center;
-	color: #1D6154;
 }
 
 .button {
@@ -447,7 +447,7 @@ input[type="submit"]{
 	gap: 19px;
 }
 
-
+/* Fenêtre */
 .modal {
 	position: fixed;
 	margin: 0 auto;
@@ -496,13 +496,13 @@ input[type="submit"]{
 	border: none;
 }
 .buttonModal2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	margin-top: 32px;
 	margin-bottom: 0px;
 	width: 90%;
 	padding: 0 30px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 }
 .buttonModal2 button {
 	background-color: #ffffff;
@@ -592,15 +592,16 @@ input[type="submit"]{
 .DeleteButton {
 	position: absolute;
     background: #000000;
+	flex-direction: center;
+	justify-content: center;
+	align-items: center;
 	border-radius: 4px;
     top: 5%;
     right: 5%;
 	width: 25%;
 	height: 20%;
 	display: flex;
-	flex-direction: center;
-	justify-content: center;
-	align-items: center;
+
 }
 .colorModal {
 	color: #FFFFFF;
